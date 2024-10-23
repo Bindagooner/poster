@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Template</title>
+    <!-- Thêm fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Cormorant+Garamond:ital@0;1&family=Be+Vietnam+Pro:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #fff;
+        }
+
+        .container {
+            position: relative;
+            width: 800px;
+            height: 800px;
+        }
+
+        .marbled-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .marbled-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-portrait {
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+        }
+
+        .author-portrait img {
+            width: 120%;
+            height: 120%;
+            object-fit: cover;
+        }
+
+        .quote-circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 80px 60px;
+            text-align: center;
+        }
+
+        
+        .circle-background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid white;
+            opacity: 0.9;
+            
+        }
+
+        .circle-background img {
+            position: absolute;
+            width: 107%;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            display: block;
+        }
+
+        
+        .quote-content {
+            position: relative;
+            z-index: 2;
+            margin: top 25px;
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(0px);
+        }
+
+        
+        .quote-english,
+        .quote-vietnamese {
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 2;
+        }
+
+        .quote-english {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2em;
+            font-weight: 400;
+            color: #2c2c2c;
+            margin-bottom: 30px;
+            line-height: 1.4;
+            letter-spacing: 0.02em;
+        }
+
+        .divider {
+            width: 100px;
+            height: 1px;
+            background: #8b7355;
+            margin: 20px auto;
+
+        }
+
+        .quote-vietnamese {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            font-size: 1em;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            letter-spacing: 0.02em;
+        }
+
+        .quote-vietnamese strong {
+            font-weight: 600;
+        }
+
+        .author-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: ialic;
+            font-size: 1.1em;
+            color: #8b7355;
+            margin-top: 30px;
+            letter-spacing: 0.03em;
+        }
+
+        /* Thêm hiệu ứng mờ cho viền vòng tròn
+         .quote-circle::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.5);
+            pointer-events: none;
+            border: 3px solid white;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="marbled-bg">
+            <img src="3.2018-the-flames-of-yhu-rha-yah-poster-set-21.jpg" alt="Marbled Background">
+        </div>
+
+        <div class="author-portrait">
+            <img src="Picture1.png" alt="E'Asha Ashayana">
+        </div>
+
+        <div class="quote-circle">
+            <!-- Thêm hình ảnh Eye of AL-Hum-Bhra -->
+            <div class="circle-background">
+                <img src="A7C38CB2-CEF9-4734-B576-55818805AC09.PNG" alt="The Eye of AL-Hum-Bhra">
+            </div>
+
+            <!-- Wrap nội dung quote trong div mới -->
+            <div class="quote-content">
+                <div class="quote-english">
+                    Most of us are looking at the world through our Shadow 
+                    and we do not even know that is happening—we just feel it. 
+                    That is where we get the fear feeling, the worry feelings, and the anger feelings.
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="quote-vietnamese">
+                    Phần lớn chúng ta đang nhìn thế giới <b>thông qua Bóng tối bên trong</b> 
+                    mà không hề hay biết điều này đang xảy ra — chúng ta chỉ <b>đơn thuần cảm nhận</b>> được nó. 
+                    Đó là nơi khởi nguồn của mọi cảm xúc về <b>sợ hãi, những nỗi lo âu, và những cơn giận dữ</b>.
+                </div>
+
+                <div class="author-name">
+                    — <i>E'Asha Ashayana</i> —
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
